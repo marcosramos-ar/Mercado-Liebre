@@ -26,7 +26,7 @@ header {
 }
 
 header .top-header {
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -37,51 +37,52 @@ header .top-header {
 header .top-header .logo {
     width: 100%;
     max-width: 96px;
-    margin-right: 0;
+    margin-right: 1rem;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
 }
 
 header .top-header  p {
-    padding-top: 1rem;
     text-align: center;
     width: 100%;
+    padding: 1rem 0;
 }
 
 /* Search Box */
 
 header .form {
     display: flex;
+    flex-grow: 1;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFF;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-header .form .input {
+header .form input {
     background-color: #FFF;
-    border: 1px solid #000;
+    border: none;
     outline: none;
     color: #666;
-    padding: 2px;
+    padding: 0.75rem;
+    flex-grow: 1;
+    width: 100%;
 }
 
-header .form .input {
-    background-color: #FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
-}
 header .form .submit {
     background-color: #FFF;
-    border: 1px solid #000;
     color: #666;
-    width: 10%;
+    padding: 0.5rem;
 }
 
 /**/
 
 div.burger-menu {
     text-align: center;
+    padding: 0 0 1rem 0;
 }
 
 div.burger-menu i {
@@ -90,7 +91,6 @@ div.burger-menu i {
     color: #FFF;
     font-size: 20px;
     height: 40px;
-    margin: 10px 0px 20px 0px;
     padding: 10px;
     width: 40px;
 }
