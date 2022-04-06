@@ -47,6 +47,7 @@ header .top-header  p {
     text-align: center;
     width: 100%;
     padding: 1rem 0;
+    font-size: 16px;
 }
 
 /* Search Box */
