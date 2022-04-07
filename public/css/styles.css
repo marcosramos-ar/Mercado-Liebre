@@ -10,13 +10,18 @@ body {
 }
 
 h3 {
-    font-size: 24px;
-    padding: 1rem;
-    margin: 0;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem ;
 }
 
 p {
     font-size: 12px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 /* HEADER */
@@ -26,7 +31,6 @@ header {
 }
 
 header .top-header {
-    padding: 1rem 1rem 0 1rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -47,7 +51,7 @@ header .top-header  p {
     text-align: center;
     width: 100%;
     padding: 1rem 0;
-    font-size: 16px;
+    font-size: .75rem;
 }
 
 /* Search Box */
@@ -61,6 +65,7 @@ header .form {
     background-color: #FFF;
     border-radius: 5px;
     overflow: hidden;
+    width: 50%;
 }
 
 header .form input {
@@ -83,7 +88,6 @@ header .form .submit {
 
 div.burger-menu {
     text-align: center;
-    padding: 0 0 1rem 0;
 }
 
 div.burger-menu i {
@@ -98,24 +102,36 @@ div.burger-menu i {
 
 header nav {
     font-size: 12px;
-    padding: 1em;
 }
 
-header nav .sitebar {
-    margin-bottom: 1em;
+header nav ul.sitebar {
+    margin-bottom: 1rem;
 }
 
-header ul li {
+header nav ul li {
     list-style-type: none;
 }
 
-header ul li a {
+header nav ul li a {
     text-decoration: none;
     color: #000;
 }
 
+header nav ul li a i {
+    margin-left: 3px;
+}
 
 /**/
+
+main .last-visit {
+    margin-bottom: 2rem;
+}
+
+main section article {
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 1rem;
+}
 
 article div.main-article {
     width: 100%;
@@ -137,18 +153,6 @@ h3,
 
 section.banner img {
     width: 100%;
-}
-
-main {
-    width: 90%;
-    margin: 0 auto;
-    padding: 1rem 0;
-}
-
-main section article {
-    position: relative;
-    background-color: #fff;
-    margin: 10px 10px;
 }
 
 main section article img {
@@ -186,7 +190,7 @@ main section article i {
 /* Footer */
 
 footer {
-    padding: 3rem 2rem 2rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
     background-color: white;
 }
 
@@ -197,14 +201,15 @@ footer h3 {
 
 footer p {
     color: #666666;
+    text-align: center;
 }
 
-footer div {
+footer section {
     margin-bottom: 3em;
     text-align: center;
 }
 
-footer div i{
+footer section i{
     text-align: center;
     
     color: #0044AA;
@@ -212,19 +217,98 @@ footer div i{
     margin-bottom: 10px;
 }
 
-/* Mobile */
+/* Form Box */
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.form-box .field-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.form-box .field-box label {
+    font-size: 12px;
+    color: #666666;
+    margin-bottom: 0.2rem;
+}
+
+.form-box .field-box input[type=text],
+.form-box .field-box input[type=date],
+.form-box .field-box input[type=password],
+.form-box .field-box input[type=email]{
+    border: solid 1px #cfcfcf;
+    padding: 0.5rem;
+    border-radius: 3px;
+}
+
+.form-box .field-box .rbt-chk-box {
+    padding-top: 0.35rem;
+}
+
+.form-box .field-box .rbt-chk-box > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.form-box .field-box .rbt-chk-box > div label {
+    margin-bottom: 0;
+}
+
+.form-box .field-box .rbt-chk-box > div input {
+    margin-right: 0.5rem;
+}
+
+.form-box .btn-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.form-box button {
+    padding: .75rem 1.5rem;
+    font-size: 1.25rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    background-color: #0044AA;
+    color: white;
+}
+
+.form-box button[type=reset] {
+    background-color: #cfcfcf;
+    color: black;
+}
+
+/* Only Mobile */
 @media screen and (max-width: 361px) {
     .description {
         display: none;
     }
-
+    
     header nav {
         display: none;
     }
 }
 
-/* Tablet */
+/* Only Tablet */
 @media screen and (min-width: 361px) and (max-width: 769px) {
+    
+    header nav {
+        display: none;
+    }
 
     .products article {
         margin: 0 2% 1rem 2%;
@@ -244,17 +328,118 @@ footer div i{
     main section article {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
-    header nav {
-        display: block;
+
+    .form-box {
+        max-width: 800px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
-    .burger-menu {
-        display: none;
+
+    .form-box h3 {
+        width: 100%;
     }
+
+    .form-box .field-box {
+        width: 48%;
+    }
+
+    .form-box .btn-box {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .form-box .btn-box button{
+        margin-left: 1rem;
+    }
+
+    .form-box.login {
+        max-width: 450px;
+    }
+
+    .form-box.login .field-box {
+        width: 100%;
+    }
+    
 }
 
+/* Desktop */
+
 @media screen and (min-width: 769px) {
+
+    main .container {
+        padding: 5rem;
+    }
+
     .products article {
         margin: 0 2% 1rem 2%;
         width: 21%;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    header .top-header {
+        flex-wrap: nowrap;
+        margin-bottom: 1.5rem;
+    }
+
+    header .top-header p {
+        width: auto;
+        padding: 0;
+        width: 135px;
+        display: flex;
+        margin-left: 1rem;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header nav ul li {
+        margin-left: 1.5rem;
+    }
+
+    header nav ul li:first-child {
+        margin-left: 0;
+    }
+    
+    header nav ul.sitebar {
+        margin-bottom: 0px;
+    }
+
+    header nav ul.sitebar li {
+        margin-left: 0;
+        margin-right: 1.5rem;
+    }
+
+    header nav ul.sitebar li:last-child {
+        margin-right: 0;
+    }
+
+    footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    footer .container section {
+        width: 33%;
+        padding: 0 1%;
+    }
+
+    footer .container > p {
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 }
